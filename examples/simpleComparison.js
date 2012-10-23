@@ -1,5 +1,6 @@
 var log = require('util').log,
-    objectComparison = require('./../objectComparison');
+    inspect = require('util').inspect,
+    objectComparison = require('./../lib/objectComparison');
 
 var firstActor = {
     name : {
@@ -19,4 +20,5 @@ var secondActor = {
     occupation: ['Actor', 'author', 'director', 'TV presenter']
 }
 
-log(objectComparison(firstActor, secondActor));
+var result = objectComparison(firstActor, secondActor)
+log(inspect(result));
