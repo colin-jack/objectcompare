@@ -8,7 +8,6 @@ var firstActor = {
         second: "Gossling"
     },
     age: 31,
-    occupation: ['Actor']
 }
 
 var secondActor = {
@@ -17,7 +16,6 @@ var secondActor = {
         second: "Blessed"
     },
     age: 76,
-    occupation: ['Actor', 'author', 'director', 'TV presenter']
 }
 
 var result = objectComparison(firstActor, secondActor)
