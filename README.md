@@ -1,6 +1,6 @@
 object compare
 =======
-Node.js framework for comparing objects.
+Node.js library for comparing objects.
 
 ###Sample
 ```js

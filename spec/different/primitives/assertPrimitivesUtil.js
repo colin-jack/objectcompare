@@ -1,6 +1,7 @@
-var assert = chai.assert;
+var assert = require('chai').assert,
+    objectComparison = lib.require('objectComparison');
 
-var assertSpotsPrimitivesDifferent = function(first, second, config) {
+var assertDifferent = function(first, second, config) {
     var result;
 
     beforeEach(function() {
@@ -18,4 +19,8 @@ var assertSpotsPrimitivesDifferent = function(first, second, config) {
     it('should identify difference is different values', function(){
       assert.strictEqual("differentValues", result.differences[""].reason);
     })
+}
+
+module.exports = {
+    assertDifferent : assertDifferent
 }

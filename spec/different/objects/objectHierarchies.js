@@ -1,5 +1,5 @@
-
-var assert = chai.assert;
+var assert = require('chai').assert,
+    compareAndAssertDifferences = require('./../assertDifferencesUtil').compareAndAssertDifferences;
 
 describe('objects not matching', function(){
     describe('When objects differ on several root properties', function(){
@@ -14,7 +14,7 @@ describe('objects not matching', function(){
             goodie: { reason: "differentValues", firstValue: true, secondValue: false }
         }
 
-        shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+        compareAndAssertDifferences(first, second, expectedDifferences);
     });
 
     describe('When object hierarchies are very different including properties of sub-objects', function(){
@@ -28,6 +28,6 @@ describe('objects not matching', function(){
             "car.age": { reason: "differentValues", firstValue: 5, secondValue: 2 }
           };
 
-        shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+        compareAndAssertDifferences(first, second, expectedDifferences);
     });
 })

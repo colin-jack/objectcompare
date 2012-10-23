@@ -1,3 +1,6 @@
+var objectComparison = global.lib.require('objectComparison'),
+    assert = require('chai').assert;
+
 describe("primitives not matching", function() {
     describe('When comparing two wrapped numbers but with different constructors', function(){
         var result;

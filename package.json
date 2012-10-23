@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+
+  "name": "objectcompare",
+  "preferGlobal": "false",
+  
+  "author": "Colin Jack",
+
+  "description": "Node.js library for comparing objects.",
+  
+  "contributors": [ 
+    {
+      "name": "Colin Jack",
+      "email": "colin.jack@gmail.com"
+    } 
+  ],
+
+  "scripts": {
+    "test": "mocha -R spec spec/ -w -G --recursive"
+  },
+
+  "main": "index",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colin-jack/objectcomapre.git"
+  },
+
+  "dependencies" : {
+    "underscore"   :  "*"
+  },
+
+  "analyze": false,
+
+  "devDependencies": {
+    "mocha" :  "*",
+    "chai" :  "*",
+    "require-namespace": "*"
+  },
+
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}

@@ -1,4 +1,5 @@
-var assert = chai.assert;
+var assert = require('chai').assert,
+    compareAndAssertDifferences = require('./../assertDifferencesUtil').compareAndAssertDifferences;
 
 describe('objects not matching', function(){  
     describe('When first object has properties the second lacks', function(){
@@ -10,7 +11,7 @@ describe('objects not matching', function(){
           gender: { reason: "valueOnlyInFirstObject", firstValue: null, secondValue: undefined }
         }
 
-        shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+        compareAndAssertDifferences(first, second, expectedDifferences);
     });
 
     describe('When second object has properties the first lacks', function(){
@@ -30,6 +31,6 @@ describe('objects not matching', function(){
             }
           }
 
-        shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+        compareAndAssertDifferences(first, second, expectedDifferences);
     });
 });

@@ -1,4 +1,5 @@
-var assert = chai.assert;
+var assert = require('chai').assert,
+    objectComparison = lib.require('objectComparison');
 
 var createSimpleObject = function() {
   return { name: "bob", age: 15, gender: "male", friend: "foe", goodie: true };
@@ -42,7 +43,7 @@ var assertSpotsMatch = function(first, second, config) {
     })
 }
 
-var testUtil = {
+module.exports = {
     createSimpleObject           : createSimpleObject,
     createWithHierarchy          : createWithHierarchy,
     createWithHierarchyAndArrays : createWithHierarchyAndArrays,

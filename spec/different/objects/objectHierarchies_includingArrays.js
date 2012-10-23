@@ -1,4 +1,6 @@
-var assert = chai.assert;
+var assert = require('chai').assert,
+    testObjectMother = require('./../../testObjectMother'),
+    compareAndAssertDifferences = require('./../assertDifferencesUtil').compareAndAssertDifferences;
 
 describe('objects not matching - arrays', function(){  
     describe('When first object and second objects match', function() {
@@ -10,8 +12,7 @@ describe('objects not matching - arrays', function(){
               "friends[0].name": { reason: "differentValues", firstValue: "luigi", secondValue: "mona" }
             }
             
-
-            shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+            compareAndAssertDifferences(first, second, expectedDifferences);
         });
 
         describe('other than primitive array contents', function(){
@@ -23,7 +24,7 @@ describe('objects not matching - arrays', function(){
             }
             
 
-            shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+            compareAndAssertDifferences(first, second, expectedDifferences);
         });
 
         describe('other an array in second object having more items', function(){
@@ -37,7 +38,7 @@ describe('objects not matching - arrays', function(){
             }
             
 
-            shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+            compareAndAssertDifferences(first, second, expectedDifferences);
         });
 
 
@@ -50,7 +51,7 @@ describe('objects not matching - arrays', function(){
             }
 
 
-            shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+            compareAndAssertDifferences(first, second, expectedDifferences);
         });
 
         // TODO - Rethink, use before....
@@ -64,7 +65,7 @@ describe('objects not matching - arrays', function(){
             }
 
 
-            shouldCompareAndIdentifyDifferencesExist(first, second, expectedDifferences);
+            compareAndAssertDifferences(first, second, expectedDifferences);
         });
         // When first and second objects are arrays....
         // Array of arrays

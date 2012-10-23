@@ -1,4 +1,4 @@
-var assert = chai.assert;
+var assert = require('chai').assert;
 
 var createSimpleObject = function() {
   return { name: "bob", age: 15, gender: "male", friend: "foe", goodie: true };
@@ -30,7 +30,7 @@ var createCharacterWithSpecifiedFriends = function(friends) {
     return toReturn;   
 }
 
-var testObjectMother = {
+module.exports = {
     createSimpleObject                  : createSimpleObject,
     createWithHierarchy                 : createWithHierarchy,
     createWithHierarchyAndArrays        : createWithHierarchyAndArrays,
