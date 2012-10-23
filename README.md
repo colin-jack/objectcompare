@@ -22,8 +22,7 @@ var secondActor = {
 
 var result = objectComparison(firstActor, secondActor)
 ```
-
-Output:
+The result object will look like this:
 ```
 { 
     equal: false,
@@ -46,7 +45,7 @@ First install mocha:
 
 Run the tests:
 
-    mocha -R spec spec/ -w -G --recursive
+    mocha -R spec spec/testFixture spec/ -w -G --recursive
 
 ###Examples
 To run the examples
