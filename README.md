@@ -4,13 +4,39 @@ Node.js library for comparing objects.
 
 ###Sample
 ```js
+var firstActor = {
+    name : {
+        first : "Ryan",
+        second: "Gossling"
+    },
+    age: 31,
+}
 
+var secondActor = {
+    name : {
+        first : "Brian",
+        second: "Blessed"
+    },
+    age: 76,
+}
 
+var result = objectComparison(firstActor, secondActor)
 ```
 
 Output:
 ```
-
+{ 
+    equal: false,
+    differences: { 
+        'name.first': { reason: 'differentValues',
+                        firstValue: 'Ryan',
+                        secondValue: 'Brian' },
+        'name.second': { reason: 'differentValues',
+                         firstValue: 'Gossling',
+                         secondValue: 'Blessed' },
+         age: { reason: 'differentValues', firstValue: 31, secondValue: 76 } 
+     } 
+}
 ```
 
 ###Tests
