@@ -55,3 +55,4 @@ To run the examples
 ###Future
 * UMD support
 * Handle cyclical object graphs
+* More examples
