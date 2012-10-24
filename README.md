@@ -51,3 +51,7 @@ Run the tests:
 To run the examples
     
     node examples/simpleComparison
+
+###Future
+* UMD support
+* Handle cyclical object graphs
