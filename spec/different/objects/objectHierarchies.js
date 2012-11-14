@@ -55,7 +55,6 @@ describe('objects not matching', function(){
             assert.isTrue("startDate" in result.differences, "Expected there to be a difference for the property.");
             assert.strictEqual(difference.reason, "differentValues", "Reasons did not match.");
 
-            debugger
             assert.strictEqual(difference.firstValue.getTime(), new Date("12-12-2001").getTime(), "First value did not match.");  
             assert.strictEqual(difference.secondValue.getTime(), new Date("1-1-2005").getTime(), "Second value did not match.");
         })
