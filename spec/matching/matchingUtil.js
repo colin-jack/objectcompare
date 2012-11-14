@@ -1,5 +1,6 @@
 var assert = require('chai').assert,
-    objectComparison = lib.require('objectComparison');
+    objectComparison = lib.require('objectComparison'),
+    inspect = require('util').inspect;
 
 var createSimpleObject = function() {
   return { name: "bob", age: 15, gender: "male", friend: "foe", goodie: true };
@@ -31,15 +32,15 @@ var assertSpotsMatch = function(first, second, config) {
     var result;
 
     beforeEach(function() {
-      result = objectComparison(first, second, config);
+        result = objectComparison(first, second, config);
     })
 
     it('should identify they are the same', function(){
-      assert.isTrue(result.equal);
+        assert.isTrue(result.equal);
     })
 
     it('should identify there were no differences', function(){
-      assert.strictEqual(result.differences.length, 0);
+        assert.strictEqual(result.differences.length, 0, "Expected no differences but got: " + inspect(result.differences));
     })
 }
 

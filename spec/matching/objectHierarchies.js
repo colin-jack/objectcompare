@@ -3,7 +3,7 @@ var assert = require('chai').assert,
     testObjectMother = require('./../testObjectMother');
 
 describe("objects matching", function() {
-    describe('When comparing two simple equivalent objects', function(){
+    describe.skip('When comparing two simple equivalent objects', function(){
         var first = testObjectMother.createSimpleObject();
         var second = testObjectMother.createSimpleObject();
         assertSpotsMatch(first, second);

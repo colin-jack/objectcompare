@@ -1,4 +1,5 @@
 var assert = require('chai').assert,
+    objectComparison = lib.require('objectComparison'),
     compareAndAssertDifferences = require('./../assertDifferencesUtil').compareAndAssertDifferences;
 
 describe('objects not matching', function(){
@@ -29,5 +30,34 @@ describe('objects not matching', function(){
           };
 
         compareAndAssertDifferences(first, second, expectedDifferences);
+    });
+
+    describe('When objects differ on a date', function(){
+        var result, first, second;
+
+        beforeEach(function() {
+            var first = { startDate: new Date("12-12-2001") };
+            var second = { startDate: new Date("1-1-2005") };
+            result = objectComparison(first, second);        
+        });
+
+        it('should identify there were differences', function(){
+            assert.isFalse(result.equal, "Failed to identify that objects did not match.");
+        })  
+
+        it('should identify there was one difference', function(){
+            assert.lengthOf(Object.keys(result.differences), 1);
+        })
+
+        it('should identify correct difference', function(){      
+            var difference = result.differences["startDate"];
+
+            assert.isTrue("startDate" in result.differences, "Expected there to be a difference for the property.");
+            assert.strictEqual(difference.reason, "differentValues", "Reasons did not match.");
+
+            debugger
+            assert.strictEqual(difference.firstValue.getTime(), new Date("12-12-2001").getTime(), "First value did not match.");  
+            assert.strictEqual(difference.secondValue.getTime(), new Date("1-1-2005").getTime(), "Second value did not match.");
+        })
     });
 })
