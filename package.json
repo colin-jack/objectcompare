@@ -1,8 +1,8 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.2",
 
   "name": "objectcompare",
-  "preferGlobal": "false",
+  "preferGlobal": false,
   
   "author": "Colin Jack",
 
@@ -37,6 +37,11 @@
     "chai" :  "*",
     "require-namespace": "*"
   },
+
+  "keywords": [
+    "compare",
+    "util"
+  ],
 
   "license": "MIT",
   "engines": {
