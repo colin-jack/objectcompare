@@ -56,4 +56,3 @@ To run the examples
 * UMD support
 * Handle cyclical object graphs
 * More examples
-* Date comparison based on getTime
