@@ -1,5 +1,4 @@
-var assert = require('chai').assert,
-    objectComparison = lib.require('objectComparison'),
+var objectComparison = lib.require('objectComparison'),
     compareAndAssertDifferences = require('./../assertDifferencesUtil').compareAndAssertDifferences;
 
 describe('objects not matching', function(){
