@@ -1,50 +1,54 @@
 {
-  "version": "0.1.4",
+    "version": "0.1.4",
 
-  "name": "objectcompare",
-  "preferGlobal": false,
-  
-  "author": "Colin Jack",
+    "name": "objectcompare",
+    "preferGlobal": false,
 
-  "description": "Node.js library for comparing objects.",
-  
-  "contributors": [ 
-    {
-      "name": "Colin Jack",
-      "email": "colin.jack@gmail.com"
-    } 
-  ],
+    "author": "Colin Jack",
 
-  "scripts": {
-    "test": "mocha -R spec spec/testFixture spec/ -w -G --recursive"
-  },
+    "description": "Node.js library for comparing objects.",
 
-  "main": "index",
+    "contributors": [
+        {
+            "name": "Colin Jack",
+            "email": "colin.jack@gmail.com"
+        }
+    ],
 
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/colin-jack/objectcomapre.git"
-  },
+    "scripts": {
+        "test": "mocha -R spec spec/testFixture spec/ -w -G --recursive"
+    },
 
-  "dependencies" : {
-    "underscore": "*",
-    "require-namespace": "*"
-  },
+    "main": "index",
 
-  "analyze": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/colin-jack/objectcomapre.git"
+    },
 
-  "devDependencies": {
-    "mocha" :  "*",
-    "chai" :  "*"
-  },
+    "dependencies": {
+        "underscore": "*",
+        "require-namespace": "*"
+    },
 
-  "keywords": [
-    "compare",
-    "util"
-  ],
+    "analyze": false,
 
-  "license": "MIT",
-  "engines": {
-    "node": ">=0.6"
-  }
+    "devDependencies": {
+        "mocha": "*",
+        "chai": "*"
+    },
+
+    "keywords": [
+        "compare",
+        "util"
+    ],
+
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.10"
+    },
+
+    "scripts": {
+        "test": "mocha -R spec spec/testFixture spec/**/*_spec.js --recursive"
+    }
 }
