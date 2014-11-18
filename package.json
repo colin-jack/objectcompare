@@ -1,5 +1,5 @@
 {
-    "version": "0.1.4",
+    "version": "0.2.0",
 
     "name": "objectcompare",
     "preferGlobal": false,
@@ -40,7 +40,10 @@
 
     "keywords": [
         "compare",
-        "util"
+        "difference",
+        "util",
+        "diff",
+        "change-tracking"
     ],
 
     "license": "MIT",
