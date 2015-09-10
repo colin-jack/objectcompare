@@ -23,7 +23,7 @@
 
     "repository": {
         "type": "git",
-        "url": "https://github.com/colin-jack/objectcomapre.git"
+        "url": "https://github.com/colin-jack/objectcompare.git"
     },
 
     "dependencies": {
